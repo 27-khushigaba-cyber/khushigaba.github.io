@@ -63,6 +63,10 @@ h3{font:700 19px/1.3 var(--hd);margin:0}
 dl{margin:0}dt{font-weight:600;margin-top:14px}dd{margin:0;color:var(--muted)}
 footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 .contact a{display:block;font:600 clamp(20px,3.4vw,28px)/1.5 var(--hd);word-break:break-word}
+.id{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:22px}.id h1{margin:0}
+.ph{position:relative;width:128px;height:128px;border-radius:50%;overflow:hidden;background:var(--tint);border:3px solid var(--gold);display:grid;place-items:center;font:800 38px var(--hd);color:var(--green);flex:none}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lnk{display:inline-block;margin-top:14px;font-weight:600}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -74,7 +78,7 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);f
 
 <main class="wrap">
 <header class="hero">
-<h1>Khushi Gaba</h1>
+<div class="id"><div class="ph"><span aria-hidden="true">KG</span><img src="photo.jpg" alt="Photo of Khushi Gaba"></div><h1>Khushi Gaba</h1></div>
 <p class="role">PGDM (Financial Management) candidate, FIIB, New Delhi</p>
 <p class="lead">BBA in Banking, with a record of lead generation through structured market research, and hands-on exposure to bank reconciliation, financial statements and ratio analysis. Comfortable coordinating with stakeholders and working to targets.</p>
 <div class="btns">
@@ -125,11 +129,11 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);f
 <h2>Key projects</h2>
 <div class="hl"><strong>Research highlights:</strong> DEA-based efficiency benchmarking of 15 large-cap firms (GBRC, IIFT) and a Corporate Governance Index across 18 cement companies (ICFMCF, IIT Madras).</div>
 <div class="proj">
-<article class="card"><span class="tag">CIP Research, FIIB, 2026</span><h3>Digital Business Models and Financial Performance</h3><p>Built a 2018–2024 panel dataset of 6 listed Indian digital media companies (42 firm-year observations); applied a FinTech evaluation framework in Python to compute financial ratios and assess business-model performance.</p></article>
-<article class="card"><span class="tag">GBRC, IIFT, 2026</span><h3>Risk-Adjusted Financial Efficiency of Top Indian Large-Cap Firms (DEA)</h3><p>Applied Data Envelopment Analysis across 15 firms in Financial Services, IT and Energy to benchmark risk-adjusted operational efficiency; presented at a national research conference.</p></article>
-<article class="card"><span class="tag">ICFMCF, IIT Madras, 2026</span><h3>Corporate Governance Index and Firm Performance</h3><p>Built a Corporate Governance Index and ran OLS regression across 18 Indian cement companies (180 firm-year observations) to quantify the impact of governance practices on performance.</p></article>
-<article class="card"><span class="tag">Equity Research</span><h3>ITC Limited: DCF Valuation, Peer Multiples and Risk Assessment</h3><p>Integrated ratio analysis, DCF valuation, peer multiples, financial projections, sensitivity analysis and risk assessment into a complete equity research report.</p></article>
-<article class="card"><span class="tag">Independent Study</span><h3>Digital Banking Awareness in Low-Income Households</h3><p>Identified a 20–25% gap in digital banking awareness through an independent financial-inclusion study, informing targeted literacy recommendations.</p></article>
+<article class="card" data-key="cip"><span class="tag">CIP Research, FIIB, 2026</span><h3>Digital Business Models and Financial Performance</h3><p>Built a 2018–2024 panel dataset of 6 listed Indian digital media companies (42 firm-year observations); applied a FinTech evaluation framework in Python to compute financial ratios and assess business-model performance.</p></article>
+<article class="card" data-key="dea"><span class="tag">GBRC, IIFT, 2026</span><h3>Risk-Adjusted Financial Efficiency of Top Indian Large-Cap Firms (DEA)</h3><p>Applied Data Envelopment Analysis across 15 firms in Financial Services, IT and Energy to benchmark risk-adjusted operational efficiency; presented at a national research conference.</p></article>
+<article class="card" data-key="cgi"><span class="tag">ICFMCF, IIT Madras, 2026</span><h3>Corporate Governance Index and Firm Performance</h3><p>Built a Corporate Governance Index and ran OLS regression across 18 Indian cement companies (180 firm-year observations) to quantify the impact of governance practices on performance.</p></article>
+<article class="card" data-key="itc"><span class="tag">Equity Research</span><h3>ITC Limited: DCF Valuation, Peer Multiples and Risk Assessment</h3><p>Integrated ratio analysis, DCF valuation, peer multiples, financial projections, sensitivity analysis and risk assessment into a complete equity research report.</p></article>
+<article class="card" data-key="banking"><span class="tag">Independent Study</span><h3>Digital Banking Awareness in Low-Income Households</h3><p>Identified a 20–25% gap in digital banking awareness through an independent financial-inclusion study, informing targeted literacy recommendations.</p></article>
 </div>
 </section>
 
@@ -150,7 +154,7 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);f
 <h3>Tools</h3>
 <ul class="chips"><li>MS Excel</li><li>Power BI</li><li>R</li><li>MS Office</li><li>Claude, ChatGPT, NotebookLM</li></ul>
 <h3>Certifications</h3>
-<ul class="chips"><li>JPMorgan Chase &amp; Co Job Simulation</li><li>Financial Modelling (LinkedIn Learning)</li></ul>
+<ul class="chips"><li data-key="cert-jpm">JPMorgan Chase &amp; Co Job Simulation</li><li data-key="cert-fm">Financial Modelling (LinkedIn Learning)</li></ul>
 </div>
 <div>
 <h3>Positions of responsibility</h3>
@@ -173,5 +177,25 @@ footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);f
 </main>
 
 <footer><div class="wrap">&copy; Khushi Gaba. <a href="#top" onclick="window.scrollTo({top:0});return false;">Back to top</a></div></footer>
+<script>
+/* ADD YOUR LINKS HERE: paste a full https:// URL between the quotes. Empty = no link shown. */
+var LINKS={
+ "cip":"",
+ "dea":"",
+ "cgi":"",
+ "itc":"",
+ "banking":"",
+ "cert-jpm":"https://www.linkedin.com/in/khushigaba0810/details/certifications/",
+ "cert-fm":"https://www.linkedin.com/in/khushigaba0810/details/certifications/"
+};
+document.querySelectorAll("[data-key]").forEach(function(el){
+ var u=LINKS[el.dataset.key];if(!u)return;
+ var a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener noreferrer";
+ if(el.classList.contains("card")){a.className="lnk";a.textContent="View project";el.appendChild(a);}
+ else{a.innerHTML=el.innerHTML+" (view)";el.innerHTML="";el.appendChild(a);}
+});
+var im=document.querySelector(".ph img");
+im.addEventListener("error",function(){im.remove();});
+</script>
 </body>
 </html>
